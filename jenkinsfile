@@ -1,0 +1,32 @@
+pipeline{
+    agent{
+        node{
+            label 'ROBOSHOP'
+        }
+    }
+    stages {
+        stage('Build') {
+            steps{
+
+            }
+        }
+        stage('Test'){
+            steps{
+                script{
+                    sh """
+                        echo "Testing"
+                    """
+                }
+            }
+        }
+        stage ('Deploy'){
+            steps {
+                script {
+                    sh """
+                        echo "Deploying"
+                    """
+                }
+            }
+        }
+    }
+}
